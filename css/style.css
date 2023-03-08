@@ -201,7 +201,7 @@ body{
   width: 24px;
 }
 .visual h1{
-  font-family: var(--family-bold);
+  font-family: var(--family-medium);
   font-size: 110px;
   margin: 0;
 }
@@ -220,13 +220,13 @@ body{
   justify-content: flex-end;
 }
 .main-bottom svg{
-  animation: stroke 3s infinite alternate;
+  animation: stroke 4s infinite alternate;
   stroke-width: 2;
   stroke: #63a0ed;
 }
 .cls-1{
-  font-family: AnnaiMN-Regular, 'Annai MN';
-  font-size: 109px;
+  font-family: 'Sriracha', cursive;
+  font-size: 110px;
 }
 @keyframes stroke {
   0%   {
