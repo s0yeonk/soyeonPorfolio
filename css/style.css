@@ -254,6 +254,13 @@ body{
   transform: scale(1.03);
   transition: all .2s ease-in;
 }
+@keyframes rotate{
+  0%{transform: rotate(0);}
+  50%{
+    transform: rotate(5deg);
+  }
+  100%{transform: rotate(0);}
+}
 .vs-two{
   right: 30px;
   top: 50px;
@@ -262,13 +269,6 @@ body{
 .vs-two:hover{
   transform: rotate(20deg);
   transition: all .2s ease-in;
-}
-@keyframes rotate{
-  0%{transform: rotate(0);}
-  50%{
-    transform: rotate(5deg);
-  }
-  100%{transform: rotate(0);}
 }
 .vs-three{
   right: 0;
@@ -302,6 +302,46 @@ body{
     font-size: 7.8125vw;
   }
 }
+
+/* skill-keyword */
+@keyframes keyword {
+  0%{
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100%{
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+  }
+}
+.skill-keyword{
+  position: relative;
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  height: 30px;
+  margin-top: 50px;
+  white-space: nowrap;
+}
+.keyword-wrap{
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: keyword 10s infinite linear alternate ;
+}
+.keyword-wrap span{
+  font-size: 14px;
+  font-family: var(--family-medium);
+  color: #6c6c6c;
+  display: inline-block;
+  margin-right: 50px;
+}
+.keyword-wrap span img{
+  margin-right: 10px;
+  width: 10px;
+}
+
+
 /* about */
 /* skills */
 /* portfolio */
