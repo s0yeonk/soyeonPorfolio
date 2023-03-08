@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: default;
 }
 ul,li{
   list-style: none;
@@ -54,11 +55,13 @@ body{
 .header{
   height: 80px;
   font-family: var(--family-medium);
-  font-size: 18px;
+  font-size: 16px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 999999;
+  cursor: pointer;
 }
 .header *{
   cursor: pointer;
@@ -86,10 +89,10 @@ body{
 .left-menu ul{
   display: flex;
   gap: 70px;
-  cursor: pointer;
 }
 .left-menu ul li a{
   position: relative;
+  cursor: pointer;
   overflow: hidden;
   display: block;
   text-align: center;
@@ -138,8 +141,11 @@ body{
   position: relative;
   background-color: #dbdbdb;
   overflow: hidden;
+  font-size: 14px;
+  cursor: pointer;
 }
 .contact-btn::before{
+  cursor: pointer;
   background-color: #222;
   position: absolute;
   content: "";
@@ -162,7 +168,140 @@ body{
   transform: scaleX(1);
   transform-origin: left;
 }
+@media  screen and (max-width:1024px) {
+  
+}
+@media screen and (max-width:768px){
+
+}
 /* visual */
+.visual{
+  padding-top: 80px;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 90vh;
+}
+.visual .inner{
+  max-width: 91.1458vw;
+  width: 100%;
+  height: 100%;
+}
+.visual .inner .visual-main{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 800px;
+}
+.visual-point{
+  display: inline-block;
+}
+.visual-point img{
+  width: 24px;
+}
+.visual h1{
+  font-family: var(--family-bold);
+  font-size: 110px;
+  margin: 0;
+}
+.visual-main .main-top{
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.visual-main .main-top p{
+  line-height: 1.5;
+}
+.main-bottom{
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+}
+.main-bottom svg{
+  animation: stroke 3s infinite alternate;
+  stroke-width: 2;
+  stroke: #63a0ed;
+}
+.cls-1{
+  font-family: AnnaiMN-Regular, 'Annai MN';
+  font-size: 109px;
+}
+@keyframes stroke {
+  0%   {
+    fill: rgba(72,138,20,0); stroke: #63a0ed;
+    stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width:1;
+  }
+  70%  {fill: rgba(72,138,20,0); stroke: #63a0ed; }
+  80%  {fill: rgba(72,138,20,0); stroke: #63a0ed; stroke-width: 3; }
+  100% {
+    fill: #63a0ed; stroke: rgba(54,95,160,0); 
+    stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+  }
+}
+.visual-img{
+  display: inline-block;
+  position: absolute;
+}
+.visual-img img{
+  width: 11.9792vw;
+}
+.vs-one{
+  bottom: 150px;
+}
+.vs-one:hover{
+  transform: scale(1.03);
+  transition: all .2s ease-in;
+}
+.vs-two{
+  right: 30px;
+  top: 50px;
+  animation: rotate 2s infinite alternate ease-in-out;
+}
+.vs-two:hover{
+  transform: rotate(20deg);
+  transition: all .2s ease-in;
+}
+@keyframes rotate{
+  0%{transform: rotate(0);}
+  50%{
+    transform: rotate(5deg);
+  }
+  100%{transform: rotate(0);}
+}
+.vs-three{
+  right: 0;
+  bottom: 0;
+}
+.vs-three:hover{
+  transform: translateY(-20px);
+  transition: all .3s ease-in;
+}
+.visual .inner .visual-desc{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.visual .inner .visual-desc h3{
+  font-family: var(--family-medium);
+  font-size: 40px;
+}
+.visual .inner .visual-desc p{
+  font-family: var(--family-regular);
+  font-size: 20px;
+}
+@media screen and (max-width:1024px) {
+  .visual .inner .visual-main{
+    width: 68.3594vw;
+  }
+  .visual h1{
+    font-size: 7.8125vw;
+  }
+}
 /* about */
 /* skills */
 /* portfolio */
