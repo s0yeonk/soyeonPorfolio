@@ -31,6 +31,7 @@ html{
   font-size: 16px;
 }
 body{
+  background: #f2f2f2;
   font-family: var(--family-nanum);
   color: #222;
   font-size: 16px;
@@ -53,6 +54,7 @@ body{
 
 /* header */
 .header{
+  background: #f2f2f2;
   height: 80px;
   font-family: var(--family-medium);
   font-size: 16px;
@@ -341,9 +343,45 @@ body{
   width: 10px;
 }
 
-
 /* about */
+.about{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.about .inner{
+  height: 100%;
+}
+.about-wrap{
+  height: 100%;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.about-left{}
+.about-left div img{
+  width: 300px;
+}
+.about-right{}
 /* skills */
+.skills{
+  display: block;
+  position: relative;
+}
 /* portfolio */
+.portfolio{
+  display: block;
+  position: relative;
+}
 /* vision */
+.vision{
+  display: block;
+  position: relative;
+}
 /* contact */
+.contact{
+  display: block;
+  position: relative;
+}
